@@ -5,7 +5,7 @@ import MainScreen from "./Components/Main Comp/MainScreen";
 
 const App = () => {
 
-  const [transtasks] = useState(() => {
+  const [transTasks] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
@@ -15,8 +15,8 @@ const App = () => {
   return (
     <>
       <div className="relative flex flex-row h-screen w-screen">
-        <Nav transtasks={transtasks} />
-        <MainScreen transtasks={transtasks} />
+        <Nav transTasks={transTasks} />
+        <MainScreen transTasks={transTasks} />
 
 
       
